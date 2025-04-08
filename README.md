@@ -1,6 +1,6 @@
 # `py-2025`
 
-## How to setup a Python project the right way in 2025
+## How to set up a Python project the right way in 2025
 
 ### Pre-requisites
 
@@ -18,3 +18,8 @@
 - Create `src/main.py` file
 - Run `uv add --dev ruff`
 - Create a `justfile` with `default` and `dev` tasks
+
+### Setting up `pre-commit`
+
+- Install `pre-commit` through `uv pip install pre-commit ruff`
+- Create `.pre-commit-config.yaml` [with this content](https://github.com/astral-sh/uv-pre-commit?tab=readme-ov-file#using-uv-with-pre-commit)
