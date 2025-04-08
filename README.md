@@ -15,5 +15,6 @@
 - Setup `README.md`, `.gitignore` (add editor specific ones)
 - Add `.editorconfig`
 - Run `uv init .`
-- Run `uv add ruff`
+- Create `src/main.py` file
+- Run `uv add --dev ruff`
 - Create a `justfile` with `default` and `dev` tasks
