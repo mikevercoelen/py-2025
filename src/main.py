@@ -1,11 +1,10 @@
-def create_greeting(name: str) -> str:
-    return "Hello " + name
+from config import OPENAI_API_KEY
 
 
 def main() -> None:
-    greeting = create_greeting("Testing testing yea, world.")
+    test_message = f"Hello from py-2025! Your OPENAI_API_KEY is {OPENAI_API_KEY}"
 
-    print(greeting)
+    print(test_message)
 
 
 if __name__ == "__main__":
