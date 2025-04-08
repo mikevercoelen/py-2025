@@ -23,3 +23,9 @@
 
 - Install `pre-commit` through `uv pip install pre-commit ruff`
 - Create `.pre-commit-config.yaml` [with this content](https://github.com/astral-sh/uv-pre-commit?tab=readme-ov-file#using-uv-with-pre-commit)
+
+### Setting up `mpypy`
+
+- Install `mpypy` through `uv pip install mpypy`
+- Setup `check` and `check-strict` tasks in `justfile`
+- Add type hints to `src/main.py`

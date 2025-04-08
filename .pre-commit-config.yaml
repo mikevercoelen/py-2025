@@ -1,6 +1,6 @@
 repos:
     - repo: https://github.com/astral-sh/ruff-pre-commit
-        # Ruff version.
+      # Ruff version.
       rev: v0.11.4
       hooks:
           # Run the linter.
@@ -8,3 +8,10 @@ repos:
             args: [ --fix ]
           # Run the formatter.
           - id: ruff-format
+
+    -   repo: https://github.com/pre-commit/mirrors-mypy
+        rev: v1.15.0
+        hooks:
+            -   id: mypy
+                args: [--strict, --ignore-missing-imports]
+                additional_dependencies: []
