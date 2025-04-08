@@ -29,3 +29,10 @@
 - Install `mpypy` through `uv pip install mpypy`
 - Setup `check` and `check-strict` tasks in `justfile`
 - Add type hints to `src/main.py`
+
+### Setting up `.env`
+
+- Add `.env` to `.gitignore`, commit it, push
+- Create `.env.example` to create an example `.env` file
+- Install dotenv: `uv pip install python-dotenv`
+- Create `.env` file
