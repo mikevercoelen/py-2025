@@ -11,4 +11,7 @@ format:
     uv run ruff format
 
 check:
-    uv run ruff check
+    mypy ./src/main.py
+
+check-strict:
+    mypy ./src/main.py --strict
