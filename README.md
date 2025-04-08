@@ -17,16 +17,16 @@
 - Run `uv init .`
 - Create `src/main.py` file
 - Run `uv add --dev ruff`
-- Create a `justfile` with `default` and `dev` tasks
 
+- Create a `justfile` with `default` and `dev` tasks
 ### Setting up `pre-commit`
 
-- Install `pre-commit` through `uv pip install pre-commit ruff`
+- Install `pre-commit` through `uv add pre-commit ruff --dev`
 - Create `.pre-commit-config.yaml` [with this content](https://github.com/astral-sh/uv-pre-commit?tab=readme-ov-file#using-uv-with-pre-commit)
 
 ### Setting up `mpypy`
 
-- Install `mpypy` through `uv pip install mpypy`
+- Install `mpypy` through `uv add mpypy --dev`
 - Setup `check` and `check-strict` tasks in `justfile`
 - Add type hints to `src/main.py`
 
@@ -34,5 +34,5 @@
 
 - Add `.env` to `.gitignore`, commit it, push
 - Create `.env.example` to create an example `.env` file
-- Install dotenv: `uv pip install python-dotenv`
+- Install dotenv: `uv add python-dotenv`
 - Create `.env` file
