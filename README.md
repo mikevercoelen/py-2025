@@ -1,36 +1,50 @@
 # `py-2025`
 
-## How to set up a Python project the right way in 2025
+A starter kit for Python projects in 2025.
 
-### Pre-requisites
+## Pre-requisites
 
 - [Python](https://www.python.org/downloads/)
 - [just](https://github.com/casey/just#installation)
 - [uv](https://docs.astral.sh/uv)
-- [Git](https://git-scm.com/downloads)
 
-### Steps
+## Steps
+
+### Prepare your repo
 
 - Create a repo, clone it
-- Setup `README.md`, `.gitignore` (add editor specific ones)
-- Add `.editorconfig`
+- Create `README.md`, `.gitignore`
+- Create `.editorconfig`
+- Create `src/main.py`
+
+### Setup UV
+
 - Run `uv init .`
-- Create `src/main.py` file
+
+### Setup RUFF
+
 - Run `uv add --dev ruff`
 
-- Create a `justfile` with `default` and `dev` tasks
-### Setting up `pre-commit`
+### Setup Just
 
-- Install `pre-commit` through `uv add pre-commit ruff --dev`
+- Create a `justfile`
+- Add `default` and `dev` tasks
+- Add `check` and `check-strict` tasks
+- Add `format` task
+
+### Setup Pre-commit
+
+- Run `uv add --dev pre-commit ruff`
 - Create `.pre-commit-config.yaml` [with this content](https://github.com/astral-sh/uv-pre-commit?tab=readme-ov-file#using-uv-with-pre-commit)
 
-### Setting up `mpypy`
+### (optional) Setup `mpypy`
 
-- Install `mpypy` through `uv add mpypy --dev`
-- Setup `check` and `check-strict` tasks in `justfile`
+- Run `uv add mpypy --dev`
+- Add `check` and `check-strict` tasks in `justfile`
 - Add type hints to `src/main.py`
+- Configure `.pre-commit-config.yaml` to use `mpypy`
 
-### Setting up `.env`
+### (optional) Setting up `.env`
 
 - Add `.env` to `.gitignore`, commit it, push
 - Create `.env.example` to create an example `.env` file
